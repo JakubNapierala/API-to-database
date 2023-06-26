@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
 
 
 public class Product
@@ -31,7 +31,7 @@ public class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
        
-        optionsBuilder.UseMySql("Server=localhost;Port:3306;Database=products;Uid=root;");
+        optionsBuilder.UseSqlServer("Tu powinień być string łączący z bazą danych");
     }
         
     }
